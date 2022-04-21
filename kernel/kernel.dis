@@ -1,0 +1,11 @@
+00000000  55                push ebp
+00000001  89E5              mov ebp,esp
+00000003  83E4F0            and esp,byte -0x10
+00000006  83EC10            sub esp,byte +0x10
+00000009  E800000000        call 0xe
+0000000E  C744240C00800B00  mov dword [esp+0xc],0xb8000
+00000016  8B44240C          mov eax,[esp+0xc]
+0000001A  C60058            mov byte [eax],0x58
+0000001D  90                nop
+0000001E  C9                leave
+0000001F  C3                ret
